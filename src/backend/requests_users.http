@@ -1,0 +1,29 @@
+@URL_TUNNEL = https://shaggy-deer-admire.loca.lt
+
+### Usuarios
+GET {{URL_TUNNEL}}/users
+
+### Quadras
+GET {{URL_TUNNEL}}/courts
+
+
+### LOGIN
+POST {{URL_TUNNEL}}/login
+content-type: application/json
+
+{
+  "email": "lucas@gmail.com",
+  "password": "pedro123"
+}
+
+
+### REGISTER
+
+POST {{URL_TUNNEL}}/register
+content-type: application/json
+
+{
+  "name": "Amaury Magno",
+  "email": "amaury@gmail.com",
+  "password": "amaury123"
+}

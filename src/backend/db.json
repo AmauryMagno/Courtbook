@@ -1,0 +1,160 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Pedro",
+      "email": "teste@gmail.com",
+      "password": "$2a$10$RQMFCKV1yfxV624W/8RBOezm884D4gAP66TFzPZ7hq4p3xT6YESwe"
+    },
+    {
+      "email": "teste2@gmail.com",
+      "password": "$2a$10$iBAatigx.CuVo99PHG468OWz0Fin9uWy9BIWrmUvDDdCMnue8USAW",
+      "name": "Teste",
+      "id": 2
+    }
+  ],
+  "reservations": [
+    {
+      "id": 1,
+      "image": "http://cdn.empresasbrasil.net/IMG/br/248818_1.jpg",
+      "date": "30 Ago 2024",
+      "time": "16:00",
+      "status": "Concluído",
+      "idCourt": 1,
+      "idUser": 1,
+      "price": "R$ 90,00"
+    },
+    {
+      "id": 2,
+      "image": "https://static.sportit.com.br/public/sportit/imagens/produtos/quadra-poliesportiva-piso-modular-externo-m2-2921.jpg",
+      "date": "30 Out 2024",
+      "time": "11:00",
+      "status": "Concluído",
+      "idCourt": 2,
+      "idUser": 1,
+      "price": "R$ 70,00"
+    },
+    {
+      "id": 3,
+      "image": "http://futebolbh.com.br/portal/images/cexxxxbbburadicoruj17.png",
+      "date": "30 Out 2024",
+      "time": "11:00",
+      "status": "Cancelado",
+      "idCourt": 4,
+      "idUser": 1,
+      "price": "R$ 120,00"
+    },
+    {
+      "id": 4,
+      "image": "https://scontent.fplu19-1.fna.fbcdn.net/v/t39.30808-6/462131625_2780073472152959_7839245439081956895_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0b6b33&_nc_eui2=AeECubAN_fmZn3wFHjVFAORZUz3at6P0yfNTPdq3o_TJ87rJKhc8uOgTvpfVXUpAwLk_t_InyUw0bmbkfV202qp9&_nc_ohc=xiz5F4P4oYgQ7kNvgF2EXff&_nc_zt=23&_nc_ht=scontent.fplu19-1.fna&_nc_gid=AQ2JazJvqNL2EiNDBonzzeB&oh=00_AYCC0G_-oAsybKXx2X3Xtvf-Z66Gny7kMKKKRUYjfE--BA&oe=675C0668",
+      "date": "30 Out 2024",
+      "time": "11:00",
+      "status": "Concluído",
+      "idCourt": 7,
+      "idUser": 2,
+      "price": "R$ 100,00"
+    },
+    {
+      "id": 1732796548673,
+      "image": "https://altipisos.com.br/wp-content/uploads/2020/06/altipisos-poliesportiva.jpeg",
+      "date": "31 Dez 2024",
+      "time": "20:00",
+      "status": "Agendado",
+      "idCourt": 5,
+      "idUser": 1,
+      "price": "R$ 120,00"
+    }
+  ],
+  "courts": [
+    {
+      "id": 1,
+      "name": "Quadra 1",
+      "category": "Futevôlei",
+      "price": "R$ 90,00",
+      "image": "https://www.areiaaoquadrado.com.br/wp-content/uploads/2023/12/Areia-ao-quadrado-quadras-em-areia.webp",
+      "address": "Rua dos Engenheiros, 123",
+      "neighborhood": "Bairro Alípio de Melo",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 2,
+      "name": "Quadra 2",
+      "category": "Futevôlei",
+      "price": "R$ 70,00",
+      "image": "https://www.submit.10envolve.com.br/uploads/bbc51c9b05670dd41f3e22d12976f526d9b522f4/8ff36322acbc58c12880fd93ed0a578c.jpeg",
+      "address": "Rua Padre José, 123",
+      "neighborhood": "Bairro Padre Eustáquio",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 3,
+      "name": "Quadra 3",
+      "category": "Futevôlei",
+      "price": "R$ 70,00",
+      "image": "https://lh3.googleusercontent.com/proxy/o8vJ07hYlFQyW5JcSBDiUHsZtjMGa_bjKVDFSCdCkldAtmxyWOIhXVeHCD6U6ODz32_LmjyM3QPiTrrIh4qb1Dw3226UyYYo1NMO9ApJK6h0hqQmE_Va_gwd1FOcGjDLdw2nBg",
+      "address": "Rua Nova, 123",
+      "neighborhood": "Bairro Buritis",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 4,
+      "name": "Quadra 1",
+      "category": "Society",
+      "price": "R$ 120,00",
+      "image": "https://naquadra.com.br/anexos/foto187.jpg",
+      "address": "Rua José Pedro, 123",
+      "neighborhood": "Bairro Santo Antônio",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 5,
+      "name": "Quadra 2",
+      "category": "Society",
+      "price": "R$ 120,00",
+      "image": "https://naquadra.com.br/anexos/foto150.jpg",
+      "address": "Rua dos Advogados, 123",
+      "neighborhood": "Bairro Cidade Nova",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 6,
+      "name": "Quadra 1",
+      "category": "Futsal",
+      "price": "R$ 100,00",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmhAyFO_zWcKlaKMcG5hLDTwA8LHnnwdWcBg&s",
+      "address": "Rua Videira, 123",
+      "neighborhood": "Bairro Castelo",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 7,
+      "name": "Quadra 2",
+      "category": "Futsal",
+      "price": "R$ 100,00",
+      "image": "https://naquadra.com.br/anexos/Foto184.Jpg",
+      "address": "Rua Coronel Fabriciano, 123",
+      "neighborhood": "Bairro Ouro Preto",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 8,
+      "name": "Quadra 1",
+      "category": "Beach",
+      "price": "R$ 80,00",
+      "image": "https://minhaquadra.com.br/wp-content/uploads/2024/06/Imagem-1-3-1024x1024.jpg",
+      "address": "Rua Desembargador, 123",
+      "neighborhood": "Bairro Caiçara",
+      "cityState": "Belo Horizonte - MG"
+    },
+    {
+      "id": 9,
+      "name": "Quadra 2",
+      "category": "Beach",
+      "price": "R$ 80,00",
+      "image": "https://static.sportit.com.br/public/sportit/imagens/produtos/quadra-de-beach-tennis-sport-it-m2-2946.jpg",
+      "address": "Rua Amparo, 123",
+      "neighborhood": "Bairro Prado",
+      "cityState": "Belo Horizonte - MG"
+    }
+  ]
+}

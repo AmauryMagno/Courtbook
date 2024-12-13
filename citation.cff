@@ -1,0 +1,28 @@
+cff-version: 1.0.1
+message: Sistema para locação de espaços esportivos
+title: CourtBook
+authors:
+  - family-names: Ferreira Nogueira
+    given-names: Pedro Flávio
+  - family-names: Simões Galinari
+    given-names: Vitor Abi-Acl
+  - family-names: Pereira Pontes
+    given-names: Tomaz Martins
+  - family-names: Felix Braga
+    given-names: Gustavo
+  - family-names: Costa Magno
+    given-names: Amaury Vinícius
+  - family-names: Orfus Tavares
+    given-names: Alvaro Henrique
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Gonçalves de Pontes
+    given-names: Diego Roberto
+keywords:
+  - quadra
+  - reservas
+  - data
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2024-2-e3-proj-mov-t4-courtbook
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2024-06-26
