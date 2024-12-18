@@ -33,3 +33,85 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+
+#Exceções de atualização Python Django
+
+# Arquivos de compilação do Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ambiente virtual
+venv/
+ENV/
+env/
+.venv/
+.pyenv/
+.pipenv/
+.venv.bak/
+
+# Configurações de IDE/Editor
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Logs e bases de dados
+*.log
+*.sqlite3
+*.db
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de pacotes
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+wheels/
+
+# Arquivos de cobertura de testes
+.coverage
+*.cover
+coverage.xml
+.cache
+
+# Configuração do pytest
+.pytest_cache/
+
+# Pipfile e outras dependências geradas
+Pipfile.lock
+poetry.lock
+
+
+#Arquivos do Frontend - React
+# Dependências do Node.js
+src/frontend/node_modules/
+
+# Diretório de build
+build/
+dist/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache e arquivos temporários
+.cache/
+.tmp/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Configurações do sistema operacional
+.DS_Store
+Thumbs.db
