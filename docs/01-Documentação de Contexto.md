@@ -1,46 +1,39 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+No cenário atual, onde a otimização do tempo e a redução de custos são prioridades, a população busca constantemente maneiras de aprimorar a gestão desses recursos. Essa necessidade é especialmente evidente no contexto de atividades recreativas e esportivas, como a utilização de quadras esportivas, onde a eficiência na reserva e no uso do espaço pode impactar diretamente a experiência do cliente e o sucesso do estabelecimento.
+
+Neste projeto, propomos o desenvolvimento de um software especializado para o aluguel de quadras. O objetivo principal é melhorar a qualidade do serviço oferecido, assegurando que o processo de reserva seja eficiente, seguro e acessível. Desde a seleção do horário, um sistema bem estruturado pode evitar falhas que comprometam a experiência do usuário, garantindo uma conexão mais fluida entre o cliente e o estabelecimento.
+
+Para enfrentar os desafios do gerenciamento de reservas de quadras, é essencial implementar uma solução que otimize o atendimento, reduza o tempo de espera e melhore a conveniência para os usuários. Esses fatores são cruciais não apenas para a satisfação do cliente, mas também para aumentar a atratividade e a competitividade do estabelecimento.
+
+Assim, a criação de um sistema de controle e gestão de horários para o aluguel de quadras surge como uma ferramenta eficaz. Esta solução simplifica o processo de reserva, proporcionando um controle mais robusto sobre os horários e garantindo que os clientes possam aproveitar ao máximo cada etapa da sua experiência, desde a reserva até a utilização das quadras. 
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
+Falta de logística no gerenciamento do estabelecimento nos aluguéis das quadras, causando atraso os horários marcados.
 
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
 
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+## Objetivo Geral
 
-## Objetivos
+O objetivo é desenvolver um sistema de gerenciamento de aluguéis de quadras esportivas que otimize a operação do estabelecimento.
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+### Objetivos Específicos
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+* Centralizar a gestão: Consolidar todas as informações sobre os aluguéis em um único sistema, facilitando o controle e a organização.
+* Agilizar a reserva: Permitir que os clientes reservem as quadras de forma rápida e intuitiva, diretamente pelo sistema, eliminando a necessidade de ligações ou contato pessoal.
+* Otimizar a ocupação: Criar um calendário visual intuitivo que permita visualizar a disponibilidade das quadras por dia e horário, evitando duplicidades e maximizando a ocupação.
+* Automatizar tarefas: Simplificar processos como a emissão de recibos e a cobrança, reduzindo a carga de trabalho da equipe e minimizando erros.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+A falta de uma solução que otimize o processo de reserva de quadras e outros ambientes disponibilizados pelo estabelecimento é evidente.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+Pesquisas indicam que, entre março e novembro de 2020, as buscas por exercícios em casa duplicaram, com destaque para o aumento do interesse por ciclismo (+144%) e natação (+230%). A porcentagem de pessoas que declaram praticar esportes aumentou de 58% em 2018 para 69% em 2020. Esses números têm crescido desde o período da pandemia, quando as pessoas passaram a se cuidar mais e a buscar novas formas de lazer (2021, Globo.com).
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Essa lacuna pode ser preenchida com a integração de tecnologia à gestão do estabelecimento. A implementação de soluções tecnológicas pode não apenas agilizar o processo de reservas, mas também oferecer a possibilidade de locação e reserva de materiais esportivos, como coletes, bolas e outros itens disponibilizados pelo empresário.
+
+Portanto, a implementação de um aplicativo que otimize o sistema e auxilie na organização e comunicação entre o estabelecimento e cliente é altamente vantajosa.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
-
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
+O sistema é voltado tanto para proprietários de espaços esportivos quanto para seus clientes. Os proprietários podem gerenciar a agenda de suas quadras com facilidade, além de oferecer diversas modalidades esportivas. Por outro lado, os clientes podem encontrar e reservar horários de forma rápida e simples.
