@@ -8,19 +8,16 @@ Apresente uma visão geral do que será abordado nesta parte do documento, enume
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+|            | Carlos Eduardo                      | Ingrid Andrade                     | Ginásio Agilize                       |
+|------------|-----------------------------------|------------------------------------|---------------------------------------|
+|            | <div align="center"><img src="./img/carlos.jpg" width="300" title="Carlos Eduardo"></div> | <div align="center"><img src="./img/ingrid.webp" width="300" title="Ingrid Andrade"></div> | <div align="center"><img src="./img/escola.webp" width="300" title="Escola Aprender"></div> |
+| Idade      | 48                                | 24                                | 10+                                  |
+| Ocupação   | Pizzaiolo e empreendedor, sócio da Pizza Prime | Enfermeira                         | Ginásio                 |
+| Aplicativos | ● Instagram <br> ● Flipboard <br> ● Linkedin | ● Instagram <br> ● Tiktok <br> ● Linkedin | ● Email <br> ● Google Drive <br> ● Instagram |
+| Motivações | ● Busca eficiência em todos os aspectos da vida, incluindo o lazer. <br> ● Quer garantir que o tempo gasto com os amigos seja aproveitado ao máximo, sem complicações. | ● Apaixonada por enfermagem e esportes, especialmente futsal. <br> ● Quer otimizar seu tempo livre sem se preocupar com a desorganização nas reservas de quadras. | ● Proporcionar atividades recreativas para os clientes. <br> ● Precisa de uma solução eficiente para locação de quadras que minimize o tempo de gestão e maximize a utilização dos espaços. |
+| Frustrações | ● A dificuldade em reunir amigos suficientes para jogar, muitas vezes levando ao cancelamento da reserva. <br> ● Lidar com atrasos nas reservas, impactando seu tempo livre limitado. | ● Dificuldade em organizar jogos de futsal com amigos devido a atrasos nas quadras. | ● A dificuldade em coordenar múltiplas reservas e garantir a disponibilidade das quadras para todos os interessados. |
+| Hobbies | ● Jogos eletrônicos <br> ● Viagens <br> ● Corrida | ● Jogar futsal <br> ● Assistir Tiktok | ● Organizar eventos <br> ● Parcerias comunitárias |
+| História | Carlos Eduardo quer um aplicativo para alugar quadras e jogar com seus amigos, mas enfrenta o desafio de cancelar reservas quando não consegue reunir pessoas suficientes. Ele busca um sistema que permita ajustar as reservas facilmente ou encontrar outros jogadores para evitar frustrações e aproveitar melhor seu tempo livre. | Ingrid deseja um sistema que facilite a reserva de quadras, permitindo que ela e seus amigos joguem futsal sem complicações. Um sistema eficiente ajudaria a eliminar frustrações e garantir que ela aproveite ao máximo seu tempo livre. | O Ginásio Agiliza precisa de um sistema para locar quadras de forma organizada, garantindo que os eventos e outras atividades esportivas sejam realizados sem complicações. Um sistema eficiente ajudaria a otimizar o uso dos espaços e a facilitar a comunicação com os clientes. |
 
 ## Histórias de Usuários
 
