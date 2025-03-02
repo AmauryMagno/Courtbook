@@ -1,4 +1,4 @@
-<img src="docs/img/Template_CourtBook/Logo_CourtBook.png" alt="CourtBook" width="300" />
+<img src="./docs/img/Logo_CourtBook.png" alt="CourtBook" width="300" />
 
 `Análise e Desenvolvimento de Sistemas`
 
