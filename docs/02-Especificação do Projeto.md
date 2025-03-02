@@ -25,17 +25,21 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
-
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
+|Cliente (Carlos/Ingrid)| Criar uma conta no aplicativo | Acessar as funcionalidades de reserva de quadras |
+|Cliente (Carlos/Ingrid)| Fazer login no aplicativo usando minhas credenciais | Acessar minha conta e minhas reservas |
+|Cliente (Carlos/Ingrid)| Navegar facilmente entre as diferentes seções do aplicativo | Encontrar rapidamente as informações que preciso |
+|Cliente (Carlos)| Filtrar quadras por categoria (ex: futsal, basquete) | Encontrar o tipo de quadra que me interessa |
+|Cliente (Ingrid)| Visualizar informações detalhadas e fotos das quadras disponíveis | Determinar se atendem às minhas necessidades antes de reservar |
+|Cliente (Carlos)| Ver quais dias e horários estão disponíveis para cada quadra | Planejar minha reserva adequadamente |
+|Cliente (Ingrid)| Reservar uma quadra para uma data e horário específicos | Garantir o espaço para meu jogo de futsal |
+|Cliente (Carlos)| Receber confirmação da minha reserva | Ter certeza de que minha reserva foi bem-sucedida |
+|Cliente (Ingrid)| Cancelar minha reserva se meus planos mudarem | Não perder dinheiro ou impedir que outros usem a quadra |
+|Cliente (Carlos)| Avaliar e revisar a quadra após utilizá-la | Compartilhar minha experiência com outros usuários e com a administração |
+|Gerente (Ginásio Agilize)| Ter uma interface separada dos clientes | Gerenciar as operações da instalação de forma eficiente |
+|Gerente (Ginásio Agilize)| Adicionar novas quadras ao sistema | Permitir que os clientes as reservem |
+|Gerente (Ginásio Agilize)| Editar detalhes das quadras ou removê-las do sistema | Manter as informações atualizadas |
+|Gerente (Ginásio Agilize)| Visualizar todas as reservas em formato de calendário ou lista | Gerenciar a disponibilidade e o agendamento das quadras |
+|Gerente (Ginásio Agilize)| Marcar reservas como pagas após receber o pagamento | Acompanhar a receita e confirmar transações concluídas |
 
 ## Requisitos
 
