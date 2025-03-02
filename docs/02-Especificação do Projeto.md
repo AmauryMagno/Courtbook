@@ -96,14 +96,19 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
 ## Gerenciamento de Tempo
+Na imagem abaixo é possível visualizar todas as tarefas com suas respectivas datas de início, término e duração, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
-
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+<div align="center"><img src="./img/Gerenciamento%20de%20Tempo.jpg"  title=" Planilha de Gerenciamento de Tempo"></div>
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+<div align="center"><img src="./img/Gerenciamento%20de%20Tempo%20Grafico.png"  title=" Gráfico de Gerenciamento de Tempo"></div>
+
+## Gerenciamento de Equipe
+
+O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+
+<div align="center"><img src="./img/Gerenciamento%20de%20Equipe.jpg"  title=" Gráfico de Gantt"></div>
 
 ## Gerenciamento de Equipe
 
