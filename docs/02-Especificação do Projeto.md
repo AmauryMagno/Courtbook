@@ -33,13 +33,19 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |Cliente (Carlos)| Ver quais dias e horários estão disponíveis para cada quadra | Planejar minha reserva adequadamente |
 |Cliente (Ingrid)| Reservar uma quadra para uma data e horário específicos | Garantir o espaço para meu jogo de futsal |
 |Cliente (Carlos)| Receber confirmação da minha reserva | Ter certeza de que minha reserva foi bem-sucedida |
+|Cliente (Carlos/Ingrid)| Receber lembretes sobre minhas reservas próximas | Não esquecer e evitar atrasos nos jogos agendados |
+|Cliente (Carlos/Ingrid)| Reportar ou visualizar atrasos em reservas | Planejar melhor meu tempo e evitar esperas desnecessárias |
 |Cliente (Ingrid)| Cancelar minha reserva se meus planos mudarem | Não perder dinheiro ou impedir que outros usem a quadra |
 |Cliente (Carlos)| Avaliar e revisar a quadra após utilizá-la | Compartilhar minha experiência com outros usuários e com a administração |
+|Cliente (Carlos)| Buscar ou convidar outros usuários para jogar | Completar meu time quando não consigo reunir amigos suficientes |
+|Cliente (Carlos/Ingrid)| Escolher entre diferentes métodos de pagamento | Utilizar a opção que for mais conveniente para mim |
 |Gerente (Ginásio Agilize)| Ter uma interface separada dos clientes | Gerenciar as operações da instalação de forma eficiente |
 |Gerente (Ginásio Agilize)| Adicionar novas quadras ao sistema | Permitir que os clientes as reservem |
 |Gerente (Ginásio Agilize)| Editar detalhes das quadras ou removê-las do sistema | Manter as informações atualizadas |
 |Gerente (Ginásio Agilize)| Visualizar todas as reservas em formato de calendário ou lista | Gerenciar a disponibilidade e o agendamento das quadras |
 |Gerente (Ginásio Agilize)| Marcar reservas como pagas após receber o pagamento | Acompanhar a receita e confirmar transações concluídas |
+|Gerente (Ginásio Agilize)| Registrar e monitorar atrasos nas reservas | Otimizar o uso das quadras e melhorar a experiência dos clientes |
+|Gerente (Ginásio Agilize)| Visualizar relatórios de utilização das quadras | Identificar horários de pico e baixa demanda para otimizar a operação |
 
 ## Requisitos
 
