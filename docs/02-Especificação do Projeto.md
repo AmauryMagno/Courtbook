@@ -90,7 +90,7 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 ## Diagrama de Casos de Uso
 
 
-![image](docs/img/caso-uso.png)
+![image]([docs/img/caso-uso.png](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2025-1-e4-proj-infra-t3-pmv-ads-2025-1-e4-proj-courtbook/blob/main/docs/img/caso-uso.png?raw=true))
 
 
 # Gerenciamento de Projeto
