@@ -41,12 +41,20 @@ Apresente a divisão de papéis entre os membros do grupo.
 Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum como base para definição do processo de desenvolvimento. A equipe está organizada da seguinte maneira:
 - Scrum Master: Pedro Nogueira;
 - Product Owner: Siderley Tadeu;
-- Equipe de Desenvolvimento: Vitor Galinari, Amaury Magno, Gustavo Braga, Alvaro Henrique, Tomaz Martins,Pedro Nogueira,Siderley Tadeu;
+- Equipe de Desenvolvimento: Vitor Galinari, Amaury Magno, Gustavo Braga, Alvaro Henrique, Tomaz Martins, Pedro Nogueira, Siderley Tadeu;
 - Equipe de Design: Alvaro Henrique e Gustavo Braga.
 
 ### Processo
 
-Coloque  informações sobre detalhes da implementação do Scrum seguido pelo grupo. O grupo deverá fazer uso do recurso de gerenciamento de projeto oferecido pelo GitHub, que permite acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução.
+#### Etapa - 1
+Na primeira etapa do projeto, dividimos as funções solicitadas entre os integrantes da seguinte forma:
+- Diagrama de Casos de Uso: Alvaro Henrique
+- Personas: Vitor Galinari
+- Historias de Usuario: Tomaz Martins
+- Requisitos: Siderley Tadeu
+- Gerenciamento de Tempo, Gerenciamento de Equipe e README de apresentação: Amaury Magno
+
+O projeto teve um início tardio devido a organização da equipe na turma correta, gerando algumas dificuldades durante o desenvolimento dos requisitos desta etapa. Diaante essas dificuldades o grupo fividiu rapidamente o que precisava ser finalizado dentro do prazo, entre os integrantes, de forma que cada um ficou responsável por uma parte crucial para conclusão da primeira etapa do projeto
  
 
 ### Ferramentas
