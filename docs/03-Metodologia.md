@@ -48,6 +48,8 @@ Exemplificação: A equipe utiliza metodologias ágeis, tendo escolhido o Scrum 
 
 #### Etapa - 1
 Na primeira etapa do projeto, dividimos as funções solicitadas entre os integrantes da seguinte forma:
+- Documentação de Contexto: Gustavo Braga
+- Metodologia : Pedro Nogueira
 - Diagrama de Casos de Uso: Alvaro Henrique
 - Personas: Vitor Galinari
 - Historias de Usuario: Tomaz Martins
