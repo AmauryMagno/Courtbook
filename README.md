@@ -1,25 +1,26 @@
-# TÍTULO DO PROJETO
+<img src="docs/img/Template_CourtBook/Logo_CourtBook.png" alt="CourtBook" width="300" />
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio`
 
-`SEMESTRE`
+`4º Eixo - 02/2025`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O objetivo é desenvolver um sistema de gerenciamento de aluguéis de quadras esportivas que otimize a operação do estabelecimento, e integre os processos e fluxos atráves de diferentes dispositivos, mobile e Web.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
-* Nome completo do aluno 6
+* Alvaro Henrique Orfus Tavares
+* Amaury Vinícius Costa Magno
+* Gustavo Felix Braga
+* Pedro Flávio Ferreira Nogueira
+* Siderley Tadeu Rosa De Oliveira Luciano
+* Vitor Abi-Acl Simões Galinari
+* Tomaz Martins Pereira Pontes
 
 ## Orientador
 
-* Nome completo do professor 1
+* Felipe Augusto Lara Soares
 
 ## Instruções de utilização
 
