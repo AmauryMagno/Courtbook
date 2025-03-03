@@ -49,54 +49,42 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
-
-<strong>Crie no mínimo 12 Requisitos funcionais, 6 não funcionais e 3 restrições</strong>
-<strong>Cada aluno será responsável pela execução completa (back, web e mobile) de pelo menos 2 requisitos que será acompanhado pelo professor</strong>
-### Requisitos Funcionais
-
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | Pedro |
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA | João |
+|RF-001|	Deve permitir aos usuários fazerem login.| Alta |----|
+|RF-002| Deve permitir aos usuários que se cadastrem no aplicativo.| Alta |----|
+|RF-003|	Deve permitir os usuários navegarem entre as páginas da aplicação. | Alta |----|
+|RF-004|	Deve haver duas interfaces, uma para os clientes e outra para a gerência do estabelecimento.| Alta |----|
+|RF-005|	Deve permitir ao gerente cadastrar novas quadras.| Média |----|
+|RF-006| Deve permitir ao gerente editar ou apagar uma quadra.| Média |----|
+|RF-007| Deve permitir, na interface de gerência, visualizar os agendamentos realizados.| Alta |----|
+|RF-008|	Deve permitir ao gerente confirmar o pagamento após aluguel.| Alta |----|
+|RF-009|	Deve permitir ao cliente filtrar as quadras por categoria.| Média |----|
+|RF-010|	Deve permitir ao usuário visualizar o espaço a ser locado.| Alta |----|
+|RF-011|	Deve permitir ao cliente visualizar os dias e horários vagos nas quadras.| Alta |----|
+|RF-012|	Deve permitir ao usuário agendar o espaço.| Alta |----|
+|RF-013|	Deve informar e/ou avisar ao cliente sobre o agendamento.| Alta |----|
+|RF-014|	Deve permitir ao cliente cancelar um agendamento.| Alta |----|
+|RF-015|	Deve permitir ao usuário qualificar o espaço usado.| Média |----|
 
-### Requisitos não Funcionais
+## Requisitos não Funcionais
 
-|ID     | Descrição do Requisito  |Prioridade |
-|-------|-------------------------|----|
-|RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
-
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+|ID    | Descrição do Requisito  | Prioridade |
+|------|-----------------------------------------|----|
+|RNF-001| As requisições e interações dentro do aplicativo devem ser rápidas para agilizar e facilitar o processo.| Alta |
+|RNF-002| O aplicativo deve ser intuitivo para pessoas sem experiência.| Média |
+|RNF-003| O sistema deve estar em conformidade com as regulamentações estabelecidas pela Lei Geral de Proteção de Dados (LGPD).| Alta |
+|RNF-004| Deve ser desenvolvido de forma distribuida.| Alta |
+|RNF-005| O sistema deve garantir alta disponibilidade, minimizando o tempo de inatividade para não comprometer a experiência do usuário.| Alta |
+|RNF-006| O aplicativo deve ser compatível com dispositivos Android e iOS, garantindo uma experiência uniforme em ambas as plataformas.| Alta |
 
 ## Restrições
 
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
-
-Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
-
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
-
+|ID    | Descrição do Requisito  |
+|------|-----------------------------------------|
+|RE-01|	O projeto deve ser entregue ao término do semestre letivo.|
+|RE-02|	O desenvolvimento do trabalho deve ser realizado exclusivamente pelo grupo, sendo proibida a participação de terceiros.|
+|RE-03|	O sistema deve ser desenvolvido em ReactNative com auxílio do Expo.|
 ## Diagrama de Casos de Uso
 
 <img src="./img/caso-uso.png">
