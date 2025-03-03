@@ -84,7 +84,6 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 |------|-----------------------------------------|
 |RE-01|	O projeto deve ser entregue ao término do semestre letivo.|
 |RE-02|	O desenvolvimento do trabalho deve ser realizado exclusivamente pelo grupo, sendo proibida a participação de terceiros.|
-|RE-03|	O sistema deve ser desenvolvido em ReactNative com auxílio do Expo.|
 ## Diagrama de Casos de Uso
 
 <img src="./img/caso-uso.png">
