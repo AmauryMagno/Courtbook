@@ -1,4 +1,5 @@
-const { Router } = require("express");
+import { Router } from "express";
+import ReservationsController from "./controllers/ReservationsController.js";
 
 const routes = new Router()
 
@@ -9,5 +10,7 @@ routes.get('/', (req,res)=>{
     });
 })
 
+routes.post('/reservations',ReservationsController.create)
 
-module.exports = routes;
+
+export default routes
