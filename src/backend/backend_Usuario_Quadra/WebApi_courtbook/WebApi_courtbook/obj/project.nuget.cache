@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "SL0m3s2bnYWs1OLNSSs+QcRWJoTQ2OYL8O+gBycQ8HReNOzobOt+J6IF44q7XzfsK+4CeJTBSvXUXlEXPBJ82A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Amaur\\OneDrive\\Área de Trabalho\\proj-courtbook\\proj-courtbook\\src\\backend\\backend_Usuario_Quadra\\WebApi_courtbook\\WebApi_courtbook\\WebApi_courtbook.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Amaur\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Amaur\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Amaur\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amaur\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amaur\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Amaur\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

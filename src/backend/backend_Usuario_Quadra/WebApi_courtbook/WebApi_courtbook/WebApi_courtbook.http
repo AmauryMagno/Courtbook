@@ -1,0 +1,6 @@
+@WebApi_courtbook_HostAddress = http://localhost:5058
+
+GET {{WebApi_courtbook_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
