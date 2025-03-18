@@ -21,118 +21,93 @@ Este documento descreve a estrutura e o esquema do banco de dados não relaciona
 
 ## Esquema do Banco de Dados
 ### Coleção: users
-Armazena as informações dos usuários do sistema.
-
+Armazena as informações dos usuários do sistema (clientes e administradores de quadras).
 Estrutura do Documento
 
 ```Json
 {
-    "_id": "ObjectId('5f7e1bbf9b2a4f1a9c38b9a1')",
-    "name": "John Doe",
-    "email": "john.doe@example.com",
+    "_id": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
+    "name": "Carlos Silva",
+    "email": "carlos.silva@example.com",
     "passwordHash": "hash_da_senha",
     "roles": ["admin", "user"],
-    "createdAt": "2024-08-29T10:00:00Z",
-    "updatedAt": "2024-08-29T12:00:00Z"
+    "phone": "+55 31 99999-9999",
+    "createdAt": "2025-03-18T10:00:00Z",
+    "updatedAt": "2025-03-18T12:00:00Z"
 }
 ```
 
 #### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do usuário gerado automaticamente pelo MongoDB.
+> - <strong>_id:</strong> Identificador único do usuário.
 > - <strong>name:</strong> Nome completo do usuário.
 > - <strong>email:</strong> Endereço de email do usuário.
 > - <strong>passwordHash:</strong> Hash da senha do usuário.
 > - <strong>roles:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
+> - <strong>phone:</strong> Número de telefone do usuário.
 > - <strong>createdAt:</strong> Data e hora de criação do usuário.
 > - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do usuário.
 
-### Coleção: products
-Armazena as informações dos produtos disponíveis no sistema.
+### Coleção: courts
+Armazena as informações das quadras disponíveis para reserva.
 
 ```Json
 {
-    "_id": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-    "name": "Produto Exemplo",
-    "description": "Descrição detalhada do produto.",
-    "price": 99.99,
-    "category": "Categoria Exemplo",
-    "stock": 100,
-    "createdAt": "2024-08-29T10:30:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
+    "_id": "ObjectId('65f7e1ccf9b2a4f1a9c38b9a2')",
+    "name": "Quadra Society Central",
+    "description": "Quadra de grama sintética com iluminação noturna.",
+    "location": {
+        "address": "Rua das Palmeiras, 123",
+        "city": "Belo Horizonte",
+        "state": "MG"
+    },
+    "pricePerHour": 120.00,
+    "availableTimes": ["08:00-10:00", "10:00-12:00", "18:00-20:00"],
+    "ownerId": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
+    "createdAt": "2025-03-18T10:30:00Z",
+    "updatedAt": "2025-03-18T11:30:00Z"
 }
 ```
 
 #### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do usuário gerado automaticamente pelo MongoDB.
-> - <strong>name:</strong> Nome completo do usuário.
-> - <strong>email:</strong> Endereço de email do usuário.
-> - <strong>passwordHash:</strong> Hash da senha do usuário.
-> - <strong>roles:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
-> - <strong>createdAt:</strong> Data e hora de criação do usuário.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do usuário.
+> - <strong>_id: </strong>Identificador único da quadra.
+> - <strong>name: </strong>Nome da quadra.
+> - <strong>description: </strong>Breve descrição sobre a quadra.
+> - <strong>location: </strong>Objeto contendo endereço, cidade e estado da quadra.
+> - <strong>pricePerHour: </strong>Preço da hora para alugar a quadra.
+> - <strong>availableTimes: </strong>Lista de horários disponíveis para reserva.
+> - <strong>ownerId: </strong>Identificador do usuário administrador (dono da quadra).
+> - <strong>createdAt: </strong>Data e hora de criação da quadra.
+> - <strong>updatedAt: </strong>Data e hora da última atualização dos dados da quadra.
 
-### Coleção: products
-Armazena as informações dos produtos disponíveis no sistema.
+### Coleção: reservations
+Armazena as informações das reservas feitas pelos usuários.
 
 Estrutura do Documento
 
 ```Json
 {
-    "_id": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-    "name": "Produto Exemplo",
-    "description": "Descrição detalhada do produto.",
-    "price": 99.99,
-    "category": "Categoria Exemplo",
-    "stock": 100,
-    "createdAt": "2024-08-29T10:30:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
+    "_id": "ObjectId('65f7e1ddf9b2a4f1a9c38b9a3')",
+    "userId": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
+    "courtId": "ObjectId('65f7e1ccf9b2a4f1a9c38b9a2')",
+    "date": "2025-03-20",
+    "timeSlot": "18:00-20:00",
+    "totalPrice": 240.00,
+    "status": "confirmed",
+    "createdAt": "2025-03-18T11:00:00Z",
+    "updatedAt": "2025-03-18T11:30:00Z"
 }
 ```
 
 #### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do produto gerado automaticamente pelo MongoDB.
-> - <strong>name:</strong> Nome do produto.
-> - <strong>description:</strong> Descrição detalhada do produto.
-> - <strong>price:</strong> Preço do produto.
-> - <strong>category:</strong> Categoria à qual o produto pertence.
-> - <strong>stock:</strong> Quantidade de produtos em estoque.
-> - <strong>createdAt:</strong> Data e hora de criação do produto.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do produto.
-
-### Coleção: orders
-Armazena as informações dos pedidos feitos pelos usuários.
-
-Estrutura do Documento
-
-```Json
-{
-    "_id": "ObjectId('5f7e1ddf9b2a4f1a9c38b9a3')",
-    "userId": "ObjectId('5f7e1bbf9b2a4f1a9c38b9a1')",
-    "products": [
-        {
-            "productId": "ObjectId('5f7e1ccf9b2a4f1a9c38b9a2')",
-            "quantity": 2,
-            "price": 99.99
-        }
-    ],
-    "totalPrice": 199.98,
-    "status": "pending",
-    "createdAt": "2024-08-29T11:00:00Z",
-    "updatedAt": "2024-08-29T11:30:00Z"
-}
-```
-
-#### Descrição dos Campos
-> - <strong>_id:</strong> Identificador único do pedido gerado automaticamente pelo MongoDB.
-> - <strong>userId:</strong> Referência ao identificador do usuário que fez o pedido.
-> - <strong>products:</strong> Lista de produtos incluídos no pedido, cada um com:
-> - <strong>productId:</strong> Identificador do produto.
-> - <strong>quantity:</strong> Quantidade do produto pedido.
-> - <strong>price:</strong> Preço unitário do produto no momento do pedido.
-> - <strong>totalPrice:</strong> Preço total do pedido (soma de todos os itens).
-> - <strong>status:</strong> Status atual do pedido (por exemplo, pending, shipped, delivered).
-> - <strong>createdAt:</strong> Data e hora de criação do pedido.
-> - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do pedido.
+> - <strong>_id: </strong>Identificador único da reserva.
+> - <strong>userId: </strong>Referência ao usuário que fez a reserva.
+> - <strong>courtId: </strong>Referência à quadra reservada.
+> - <strong>date: </strong>Data da reserva.
+> - <strong>timeSlot: </strong>Faixa de horário reservada.
+> - <strong>totalPrice: </strong>Preço total da reserva baseado no tempo.
+> - <strong>status: </strong>Status atual da reserva (pending, confirmed, canceled).
+> - <strong>createdAt: </strong>Data e hora de criação da reserva.
+> - <strong>updatedAt: </strong>Data e hora da última atualização dos dados da reserva.
 
 ### Boas Práticas
 
