@@ -19,6 +19,7 @@ wwwroot/
 appsettings.Development.json
 appsettings.Local.json
 secrets.json
+appsettings.json
 
 # Pacotes do NuGet
 packages/
