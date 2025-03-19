@@ -13,7 +13,7 @@ namespace WebApi_courtbook
             // Add services to the container.
             builder.Services.Configure<CourtBookDataBaseSettings>(
                 builder.Configuration.GetSection("CourtBookDatabase"));
-            builder.Services.AddSingleton<CourtBookService>();
+            builder.Services.AddTransient(typeof(MongoService<>));
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

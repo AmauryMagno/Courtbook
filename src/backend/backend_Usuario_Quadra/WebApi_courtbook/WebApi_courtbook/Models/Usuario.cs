@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebApi_courtbook.Models
 {
-    public class Usuario
+    public class Usuario : IEntity
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

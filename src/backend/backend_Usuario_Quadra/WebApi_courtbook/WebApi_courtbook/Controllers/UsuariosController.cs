@@ -2,6 +2,7 @@
 using WebApi_courtbook.Models;
 using WebApi_courtbook.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 
 namespace WebApi_courtbook.Controllers
 {
@@ -9,21 +10,21 @@ namespace WebApi_courtbook.Controllers
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
     {
-        private readonly CourtBookService _courtBookService;
+        private readonly MongoService<Usuario> _mongoService;
 
-        public UsuariosController(CourtBookService courtBookService)
+        public UsuariosController(IOptions<CourtBookDataBaseSettings> settings)
         {
-            _courtBookService = courtBookService;
+            _mongoService = new MongoService<Usuario>(settings, settings.Value.UsuarioCollectionName);
         }
 
         [HttpGet]
         public async Task<List<Usuario>> Get() =>
-            await _courtBookService.GetUsuariosAsync();
+            await _mongoService.GetAsync();
 
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Usuario>> Get(string id)
         {
-            var usuario = await _courtBookService.GetUsuariosAsync(id);
+            var usuario = await _mongoService.GetAsync(id);
             if(usuario == null) return NotFound();
             return Ok(usuario);
         }
@@ -31,27 +32,27 @@ namespace WebApi_courtbook.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(Usuario newUsuario)
         {
-            await _courtBookService.CreateAsync(newUsuario);
+            await _mongoService.CreateAsync(newUsuario);
             return CreatedAtAction(nameof(Get), new {id = newUsuario.Id}, newUsuario);
         }
 
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, Usuario updateUsuario)
         {
-            var usuario = await _courtBookService.GetUsuariosAsync(id);
+            var usuario = await _mongoService.GetAsync(id);
             if(usuario is null || updateUsuario.Id != usuario.Id) return NotFound();
             
-            await _courtBookService.UpdateAsync(id, updateUsuario);
+            await _mongoService.UpdateAsync(id, updateUsuario);
             return NoContent();
         }
 
         [HttpDelete("{id:length(24)}")]
         public async Task<IActionResult> Delete(string id)
         {
-            var usuario = await _courtBookService.GetUsuariosAsync(id);
+            var usuario = await _mongoService.GetAsync(id);
             if (usuario is null) return NotFound();
 
-            await _courtBookService.RemoveAsync(id);
+            await _mongoService.RemoveAsync(id);
             return NoContent();
         }
     }
