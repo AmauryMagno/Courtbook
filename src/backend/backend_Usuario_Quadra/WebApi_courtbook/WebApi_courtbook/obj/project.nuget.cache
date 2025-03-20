@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "sDWfUohHj8IBjJO0T3hub95/OpYimjtgh+azjPKxFKwEiYps2eyEgFuys8eWA+Pl7U/Hk//uFNdYKy12pKzYZA==",
+  "dgSpecHash": "zkbzFMQxD9zwOJxdkTxTqwYYiBIEpOpBl+OHygao0yAjHY+o0EQJ382RjVrP+2JxQ5mV5K5QME7mrwy4AlCBNQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Amaur\\OneDrive\\Área de Trabalho\\proj-courtbook\\proj-courtbook\\src\\backend\\backend_Usuario_Quadra\\WebApi_courtbook\\WebApi_courtbook\\WebApi_courtbook.csproj",
+  "projectFilePath": "C:\\Users\\Amaur\\OneDrive\\Documentos\\PUC-MG\\pmv-ads-2025-1-e4-proj-infra-t3-pmv-ads-2025-1-e4-proj-courtbook\\src\\backend\\backend_Usuario_Quadra\\WebApi_courtbook\\WebApi_courtbook\\WebApi_courtbook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Amaur\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Amaur\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",

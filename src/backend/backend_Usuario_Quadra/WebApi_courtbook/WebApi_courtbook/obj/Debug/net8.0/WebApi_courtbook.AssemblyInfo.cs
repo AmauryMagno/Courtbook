@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebApi_courtbook")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+247b659bb4cd314d61eb29b35fb0d515ab6074f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11525e1d5794640f445a5d5f7454c1f928c1dff2")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebApi_courtbook")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebApi_courtbook")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
