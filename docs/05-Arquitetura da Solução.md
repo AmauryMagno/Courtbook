@@ -62,7 +62,6 @@ Armazena as informações das quadras disponíveis para reserva.
     },
     "pricePerHour": 120.00,
     "availableTimes": ["08:00-10:00", "10:00-12:00", "18:00-20:00"],
-    "ownerId": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
     "createdAt": "2025-03-18T10:30:00Z",
     "updatedAt": "2025-03-18T11:30:00Z"
 }
@@ -75,7 +74,6 @@ Armazena as informações das quadras disponíveis para reserva.
 > - <strong>location: </strong>Objeto contendo endereço, cidade e estado da quadra.
 > - <strong>pricePerHour: </strong>Preço da hora para alugar a quadra.
 > - <strong>availableTimes: </strong>Lista de horários disponíveis para reserva.
-> - <strong>ownerId: </strong>Identificador do usuário administrador (dono da quadra).
 > - <strong>createdAt: </strong>Data e hora de criação da quadra.
 > - <strong>updatedAt: </strong>Data e hora da última atualização dos dados da quadra.
 
