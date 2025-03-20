@@ -1,0 +1,39 @@
+﻿# Pastas e arquivos do Visual Studio
+.vs/
+*.user
+*.suo
+
+# Pastas de build e publicação
+bin/
+obj/
+publish/
+wwwroot/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.cache
+*.pdb
+
+# Configurações locais e sensíveis
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+appsettings.json
+
+# Pacotes do NuGet
+packages/
+*.nupkg
+project.lock.json
+
+# Arquivos de backup
+*.bak
+*.old
+
+# Configurações locais do IDE
+*.dbmdl
+*.jfm
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
