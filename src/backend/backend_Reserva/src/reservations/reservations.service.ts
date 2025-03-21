@@ -8,7 +8,7 @@ import { UpdateReservationDto } from './dto/update-reservation.dto'
 import { InjectModel } from '@nestjs/mongoose'
 import { Reservation, ReservationDocument } from './schemas/reservation.schema'
 import { Model } from 'mongoose'
-import { errorCodes } from '../utils/errorCodeNest.js'
+import { errorCodes } from '../utils/errorCodeNest'
 
 @Injectable()
 export class ReservationsService {
