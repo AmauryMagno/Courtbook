@@ -20,18 +20,18 @@ As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de
 Este documento descreve a estrutura e o esquema do banco de dados não relacional utilizado por nosso projeto, baseado em MongoDB. O MongoDB é um banco de dados NoSQL que armazena dados em documentos JSON (ou BSON, internamente), permitindo uma estrutura flexível e escalável para armazenar e consultar dados.
 
 ## Esquema do Banco de Dados
-### Coleção: users
+### Coleção: usuarios
 Armazena as informações dos usuários do sistema (clientes e administradores de quadras).
 Estrutura do Documento
 
 ```Json
 {
-    "_id": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
-    "name": "Carlos Silva",
+    "_id": 1,
+    "nomeCompleto": "Carlos Silva",
+    "nomeUsuario": "carlos.silva",
     "email": "carlos.silva@example.com",
-    "passwordHash": "hash_da_senha",
-    "roles": ["admin", "user"],
-    "phone": "+55 31 99999-9999",
+    "senha": "hash_da_senha",
+    "perfil": ["admin", "user"],    
     "createdAt": "2025-03-18T10:00:00Z",
     "updatedAt": "2025-03-18T12:00:00Z"
 }
@@ -39,29 +39,28 @@ Estrutura do Documento
 
 #### Descrição dos Campos
 > - <strong>_id:</strong> Identificador único do usuário.
-> - <strong>name:</strong> Nome completo do usuário.
+> - <strong>nomeCompleto:</strong> Nome completo do usuário.
+> - <strong>nomeUsuario:</strong> Idendificador de usuário.
 > - <strong>email:</strong> Endereço de email do usuário.
-> - <strong>passwordHash:</strong> Hash da senha do usuário.
-> - <strong>roles:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
-> - <strong>phone:</strong> Número de telefone do usuário.
+> - <strong>senha:</strong> Hash da senha do usuário.
+> - <strong>perfil:</strong> Lista de papéis atribuídos ao usuário (por exemplo, admin, user).
 > - <strong>createdAt:</strong> Data e hora de criação do usuário.
 > - <strong>updatedAt:</strong> Data e hora da última atualização dos dados do usuário.
 
-### Coleção: courts
+### Coleção: quadras
 Armazena as informações das quadras disponíveis para reserva.
 
 ```Json
 {
-    "_id": "ObjectId('65f7e1ccf9b2a4f1a9c38b9a2')",
-    "name": "Quadra Society Central",
-    "description": "Quadra de grama sintética com iluminação noturna.",
-    "location": {
-        "address": "Rua das Palmeiras, 123",
-        "city": "Belo Horizonte",
-        "state": "MG"
-    },
-    "pricePerHour": 120.00,
-    "availableTimes": ["08:00-10:00", "10:00-12:00", "18:00-20:00"],
+    "_id": 1,
+    "nome": "Quadra Society Central",
+    "categoria": "Futebol"
+    "detalhes": "Quadra de grama sintética com iluminação noturna.",
+    "localização": {
+        "endereço": "Rua das Palmeiras, 123",
+        "cidade": "Belo Horizonte",
+        "estado": "MG"
+    },    
     "createdAt": "2025-03-18T10:30:00Z",
     "updatedAt": "2025-03-18T11:30:00Z"
 }
@@ -69,11 +68,10 @@ Armazena as informações das quadras disponíveis para reserva.
 
 #### Descrição dos Campos
 > - <strong>_id: </strong>Identificador único da quadra.
-> - <strong>name: </strong>Nome da quadra.
-> - <strong>description: </strong>Breve descrição sobre a quadra.
-> - <strong>location: </strong>Objeto contendo endereço, cidade e estado da quadra.
-> - <strong>pricePerHour: </strong>Preço da hora para alugar a quadra.
-> - <strong>availableTimes: </strong>Lista de horários disponíveis para reserva.
+> - <strong>nome: </strong>Nome da quadra.
+> - <strong>categoria: </strong>Tipo de esporte praticado.
+> - <strong>detalhes: </strong>Breve descrição sobre a quadra.
+> - <strong>localização: </strong>Objeto contendo endereço, cidade e estado da quadra.
 > - <strong>createdAt: </strong>Data e hora de criação da quadra.
 > - <strong>updatedAt: </strong>Data e hora da última atualização dos dados da quadra.
 
@@ -85,11 +83,11 @@ Estrutura do Documento
 ```Json
 {
     "_id": "ObjectId('65f7e1ddf9b2a4f1a9c38b9a3')",
-    "userId": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
-    "courtId": "ObjectId('65f7e1ccf9b2a4f1a9c38b9a2')",
-    "date": "2025-03-20",
-    "timeSlot": "18:00-20:00",
-    "totalPrice": 240.00,
+    "usuarioId": "ObjectId('65f7e1bbf9b2a4f1a9c38b9a1')",
+    "quadraId": "ObjectId('65f7e1ccf9b2a4f1a9c38b9a2')",
+    "data": "2025-03-20",
+    "horário": "18:00-20:00",
+    "preço": 240.00,
     "status": "confirmed",
     "createdAt": "2025-03-18T11:00:00Z",
     "updatedAt": "2025-03-18T11:30:00Z"
@@ -98,11 +96,11 @@ Estrutura do Documento
 
 #### Descrição dos Campos
 > - <strong>_id: </strong>Identificador único da reserva.
-> - <strong>userId: </strong>Referência ao usuário que fez a reserva.
-> - <strong>courtId: </strong>Referência à quadra reservada.
-> - <strong>date: </strong>Data da reserva.
-> - <strong>timeSlot: </strong>Faixa de horário reservada.
-> - <strong>totalPrice: </strong>Preço total da reserva baseado no tempo.
+> - <strong>usuarioId: </strong>Referência ao usuário que fez a reserva.
+> - <strong>quadraId: </strong>Referência à quadra reservada.
+> - <strong>data: </strong>Data da reserva.
+> - <strong>horário: </strong>Faixa de horário reservada.
+> - <strong>preço: </strong>Preço total da reserva baseado no tempo.
 > - <strong>status: </strong>Status atual da reserva (pending, confirmed, canceled).
 > - <strong>createdAt: </strong>Data e hora de criação da reserva.
 > - <strong>updatedAt: </strong>Data e hora da última atualização dos dados da reserva.
