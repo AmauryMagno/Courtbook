@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing'
 import { ReservationsService } from './reservations.service'
-import { Reservation } from './schemas/reservation.schema' // Importando o modelo
-import { getModelToken } from '@nestjs/mongoose' // Para obter o token do modelo
+import { Reservation } from './schemas/reservation.schema'
+import { getModelToken } from '@nestjs/mongoose'
 import { Model } from 'mongoose'
 import { CreateReservationDto } from './dto/create-reservation.dto'
 import { NotFoundException } from '@nestjs/common'
