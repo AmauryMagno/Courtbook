@@ -21,14 +21,14 @@ export class ReservationsService {
     createReservationDto: CreateReservationDto,
   ): Promise<Reservation> {
     try {
-      const newReservation = new this.reservationModel({
+      const newReservation = await this.reservationModel.create({
         userId: createReservationDto.userId,
         courtId: createReservationDto.courtId,
         date: createReservationDto.date,
         time: createReservationDto.time,
-        reservationPrice: createReservationDto.price,
+        reservationPrice: createReservationDto.reservationPrice,
       })
-      return await newReservation.save()
+      return newReservation
     } catch (error) {
       if (error.code === errorCodes.uniqueIndexErrorCode) {
         throw new ConflictException(
@@ -39,30 +39,31 @@ export class ReservationsService {
     }
   }
 
-  findAll(): Promise<Reservation[]> {
-    return this.reservationModel.find().exec()
+  async findAll(): Promise<Reservation[]> {
+    return await this.reservationModel.find()
   }
 
-  findOne(id: string): Promise<Reservation> {
-    const reservation = this.reservationModel.findById(id).exec()
-    if (!reservation)
+  async findOne(id: string): Promise<Reservation> {
+    const reservation = await this.reservationModel.findById(id)
+    if (!reservation) {
       throw new NotFoundException(`Reserva com ID ${id} não encontrada.`)
+    }
     return reservation
   }
 
   async update(id: string, updateReservationDto: UpdateReservationDto): Promise<Reservation> {
     const updatedReservation = await this.reservationModel
-      .findByIdAndUpdate(id, updateReservationDto, { new: true })
-      .exec();
+    .findByIdAndUpdate(id, updateReservationDto, { new: true })
 
     if (!updatedReservation) throw new NotFoundException(`Reserva com ID ${id} não encontrada.`);
+
     return updatedReservation;
   }
 
 
   async remove(id: string): Promise<{ message: string }> {
-    const deleted = await this.reservationModel.findByIdAndDelete(id).exec();
+    const deleted = await this.reservationModel.findByIdAndDelete(id);
     if (!deleted) throw new NotFoundException(`Reserva com ID ${id} não encontrada.`);
-    return { message: 'Reserva removida com sucesso.' };
+    return { message: 'Reserva deletada com sucesso' };
   }
 }
