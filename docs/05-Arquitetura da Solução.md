@@ -22,7 +22,7 @@ A escolha do MongoDB como banco de dados para o CourtBook foi estrategicamente a
 O MongoDB, sendo um banco de dados baseado em documentos, oferece uma flexibilidade excepcional na modelagem dos dados, o que é crucial para nossa aplicação por várias razões:
 
 - *Estrutura Dinâmica*: As quadras esportivas podem ter diferentes características e atributos dependendo do tipo de esporte. Por exemplo, uma quadra de futsal pode ter atributos diferentes de uma quadra de tênis. O MongoDB permite adicionar ou modificar campos sem necessidade de alteração do esquema.
-- - *Documentos Aninhados*: A estrutura de documentos do MongoDB permite representar naturalmente relacionamentos complexos, como a localização das quadras e detalhes específicos.
+-  *Documentos Aninhados*: A estrutura de documentos do MongoDB permite representar naturalmente relacionamentos complexos, como a localização das quadras e detalhes específicos.
 
 ### 2. Escalabilidade
 
