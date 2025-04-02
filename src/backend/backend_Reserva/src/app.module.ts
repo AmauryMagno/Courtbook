@@ -8,7 +8,7 @@ import { ReservationsModule } from './reservations/reservations.module'
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    MongooseModule.forRoot(process.env.MONGO_URL), //trocar URL para URL do banco depois que o banco tiver hospedado
+    MongooseModule.forRoot(process.env.MONGO_URL),
     ReservationsModule,
   ],
   controllers: [AppController],
