@@ -14,7 +14,32 @@ O diagrama de classes ilustra graficamente como será a estrutura do software, e
 
 ## Documentação do Banco de Dados MongoDB
 
-Este documento descreve a estrutura e o esquema do banco de dados não relacional utilizado por nosso projeto, baseado em MongoDB. O MongoDB é um banco de dados NoSQL que armazena dados em documentos JSON (ou BSON, internamente), permitindo uma estrutura flexível e escalável para armazenar e consultar dados.
+
+A escolha do MongoDB como banco de dados para o CourtBook foi estrategicamente alinhada com as necessidades específicas de um sistema de gerenciamento de quadras esportivas. Aqui estão as principais razões e vantagens desta escolha:
+
+### 1. Flexibilidade na Modelagem de Dados
+
+O MongoDB, sendo um banco de dados baseado em documentos, oferece uma flexibilidade excepcional na modelagem dos dados, o que é crucial para nossa aplicação por várias razões:
+
+- *Estrutura Dinâmica*: As quadras esportivas podem ter diferentes características e atributos dependendo do tipo de esporte. Por exemplo, uma quadra de futsal pode ter atributos diferentes de uma quadra de tênis. O MongoDB permite adicionar ou modificar campos sem necessidade de alteração do esquema.
+-  *Documentos Aninhados*: A estrutura de documentos do MongoDB permite representar naturalmente relacionamentos complexos, como a localização das quadras e detalhes específicos.
+
+### 2. Escalabilidade
+
+Considerando os requisitos não funcionais do projeto (RNF-004 e RNF-005), que exigem desenvolvimento distribuído e alta disponibilidade, o MongoDB oferece:
+
+- *Sharding Nativo*: Permite distribuir dados entre múltiplos servidores conforme o sistema cresce
+- *Replicação Integrada*: Garante alta disponibilidade e redundância dos dados
+- *Escalabilidade Horizontal*: Facilita a adição de mais servidores conforme a demanda aumenta
+
+### 3. Suporte a Dados em Tempo Real
+
+O sistema precisa lidar com atualizações em tempo real de reservas e disponibilidade de quadras. O MongoDB facilita:
+
+- *Operações em Tempo Real*: Atualizações rápidas do status das reservas
+- *Change Streams*: Permite monitorar mudanças em tempo real
+- *Consistência Eventual*: Modelo que favorece a disponibilidade em um sistema distribuído
+
 
 ## Esquema do Banco de Dados
 ### Coleção: usuarios
