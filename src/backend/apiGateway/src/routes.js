@@ -11,10 +11,18 @@ routes.get("/", (req, res) => {
   });
 });
 
-routes.post("/reservations", ReservationsController.create);
-routes.get("/reservations", ReservationsController.findAll);
-routes.get("/reservations/:id", ReservationsController.findOne);
-routes.patch("/reservations/:id", ReservationsController.update);
-routes.delete("/reservations/:id", ReservationsController.delete);
+routes.post("/reservations", verificarToken, ReservationsController.create);
+routes.get("/reservations", verificarToken, ReservationsController.findAll);
+routes.get("/reservations/:id", verificarToken, ReservationsController.findOne);
+routes.patch(
+  "/reservations/:id",
+  verificarToken,
+  ReservationsController.update
+);
+routes.delete(
+  "/reservations/:id",
+  verificarToken,
+  ReservationsController.delete
+);
 
 export default routes;
