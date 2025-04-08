@@ -1,6 +1,8 @@
 import { Router } from "express";
 import ReservationsController from "./controllers/ReservationsController.js";
 import { verificarToken } from "./middlewares/authorization.js";
+import UsersController from "./controllers/UsersController.js";
+import QuadrasController from "./controllers/QuadrasController.js";
 
 const routes = new Router();
 
@@ -24,5 +26,11 @@ routes.delete(
   verificarToken,
   ReservationsController.delete
 );
+
+
+routes.post("/users", UsersController.createUsers);
+
+
+routes.post("/courts", QuadrasController.createQuadras);
 
 export default routes;
