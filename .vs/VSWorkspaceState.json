@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\backend",
+    "\\src\\backend\\backend_Usuario_Quadra"
   ],
-  "SelectedNode": "\\WebApi_courtbook.sln (src\\backend\\backend_Usuario_Quadra\\WebApi_courtbook\\WebApi_courtbook.sln)",
+  "SelectedNode": "\\src\\backend\\backend_Usuario_Quadra\\WebApi_courtbook.sln",
   "PreviewInSolutionExplorer": false
 }
