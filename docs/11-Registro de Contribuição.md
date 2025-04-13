@@ -34,7 +34,7 @@ Amaury Vinícius Costa Magno
 
 ### Prazo
 
-- **Data de conclusão**: 2025-03-02
+- **Data de conclusão**: 02/03/2025
 
 ---
 
@@ -52,12 +52,19 @@ Desenvolver a lógica de negócio e os serviços de backend do projeto.
 
 ### Responsáveis
 
-- **Desenvolvedor Backend**: Nome do desenvolvedor
-- **Engenheiro de Dados**: Nome do engenheiro
+- **Desenvolvedor Backend:**  
+Alvaro Henrique Orfus Tavares  
+Amaury Vinícius Costa Magno  
+Gustavo Felix Braga  
+Pedro Flávio Ferreira Nogueira  
+Siderley Tadeu Rosa De Oliveira Luciano  
+Vitor Abi-Acl Simões Galinari  
+Tomaz Martins Pereira Pontes  
+ 
 
 ### Prazo
 
-- **Data de conclusão**: YYYY-MM-DD
+- **Data de conclusão**: 13/04/2025
 
 ---
 
