@@ -10,11 +10,11 @@ namespace WebApi_courtbook.Controllers
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
     {
-        private readonly MongoService<Usuario> _mongoService;
+        private readonly IMongoService<Usuario> _mongoService;
 
-        public UsuariosController(IOptions<CourtBookDataBaseSettings> settings)
+        public UsuariosController(IMongoService<Usuario> mongoService)
         {
-            _mongoService = new MongoService<Usuario>(settings, settings.Value.UsuarioCollectionName);
+            _mongoService = mongoService;
         }
 
         [HttpGet]

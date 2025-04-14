@@ -9,11 +9,11 @@ namespace WebApi_courtbook.Controllers
     [Route("api/[controller]")]
     public class QuadrasController : ControllerBase
     {
-        private readonly MongoService<Quadra> _mongoService;
+        private readonly IMongoService<Quadra> _mongoService;
 
-        public QuadrasController(IOptions<CourtBookDataBaseSettings> settings)
+        public QuadrasController(IMongoService<Quadra> mongoService)
         {
-            _mongoService = new MongoService<Quadra>(settings, settings.Value.QuadraCollectionName);
+            _mongoService = mongoService;
         }
 
         [HttpGet]
