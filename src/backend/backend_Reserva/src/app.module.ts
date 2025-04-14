@@ -4,14 +4,22 @@ import { MongooseModule } from '@nestjs/mongoose'
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
 import { ReservationsModule } from './reservations/reservations.module'
+import { APP_GUARD } from '@nestjs/core'
+import { JwtAuthGuard } from './auth/jwt-auth.guard'
 
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    MongooseModule.forRoot(process.env.MONGO_URL), //trocar URL para URL do banco depois que o banco tiver hospedado
+    MongooseModule.forRoot(process.env.MONGO_URL),
     ReservationsModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_GUARD,
+      useClass: JwtAuthGuard,
+    },
+  ],
 })
 export class AppModule {}

@@ -20,12 +20,21 @@ Coletar e documentar todos os requisitos necessários para o desenvolvimento do 
 
 ### Responsáveis
 
-- **Analista de Requisitos**: Nome do analista
-- **Gerente de Projeto**: Nome do gerente
+- **Analista de Requisitos:**  
+Alvaro Henrique Orfus Tavares  
+Gustavo Felix Braga  
+Pedro Flávio Ferreira Nogueira  
+Siderley Tadeu Rosa De Oliveira Luciano  
+Vitor Abi-Acl Simões Galinari  
+Tomaz Martins Pereira Pontes  
+
+- **Gerente de Projeto:**  
+Amaury Vinícius Costa Magno
+
 
 ### Prazo
 
-- **Data de conclusão**: YYYY-MM-DD
+- **Data de conclusão**: 02/03/2025
 
 ---
 
@@ -43,12 +52,19 @@ Desenvolver a lógica de negócio e os serviços de backend do projeto.
 
 ### Responsáveis
 
-- **Desenvolvedor Backend**: Nome do desenvolvedor
-- **Engenheiro de Dados**: Nome do engenheiro
+- **Desenvolvedor Backend:**  
+Alvaro Henrique Orfus Tavares  
+Amaury Vinícius Costa Magno  
+Gustavo Felix Braga  
+Pedro Flávio Ferreira Nogueira  
+Siderley Tadeu Rosa De Oliveira Luciano  
+Vitor Abi-Acl Simões Galinari  
+Tomaz Martins Pereira Pontes  
+ 
 
 ### Prazo
 
-- **Data de conclusão**: YYYY-MM-DD
+- **Data de conclusão**: 13/04/2025
 
 ---
 
