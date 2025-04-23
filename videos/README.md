@@ -1,3 +1,3 @@
-# Videos de acompanhamento/apresetnação das etapas
+# Videos de acompanhamento/apresentação das etapas.
 
-Faça um vídeo para cada etapa para demonstrar a participação de cada membro do grupo. Utilize esta pasta para salvar cada arquivo de vídeo ou a url de hospedagem.
+Entrega do 4°Eixo/2°Etapa ADS https://youtu.be/L3OmWP63gU8

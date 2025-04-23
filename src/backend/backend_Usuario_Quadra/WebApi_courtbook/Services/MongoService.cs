@@ -4,8 +4,16 @@ using WebApi_courtbook.Models;
 
 namespace WebApi_courtbook.Services
 {
+    public interface IMongoService<T> where T : IEntity
+    {
+        Task<List<T>> GetAsync();
+        Task<T> GetAsync(string id);
+        Task CreateAsync(T newItem);
+        Task UpdateAsync(string id, T newItem);
+        Task RemoveAsync(string id);
+    }
 
-    public class MongoService<T> where T : IEntity
+    public class MongoService<T> : IMongoService<T> where T : IEntity
     {
         private readonly IMongoCollection<T> _collection;
 

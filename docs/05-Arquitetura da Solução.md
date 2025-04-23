@@ -141,9 +141,9 @@ Na etapa 2, em máterial de apoio, estão disponíveis vídeos com a configuraç
 
 ## Tecnologias Utilizadas
 
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+Foram utilizadas diversas tecnologias no projeto para garantir uma aplicação moderna, escalável e eficiente. No Front-End, foi utilizado o React.js como biblioteca principal para construção das interfaces. Para a estilização, a equipe optou por styled-components,uma abordagem utilitária e responsiva.No Mobile optamos pela utilização do React Native visto que o custo para desenvolver seria menor já que a equipe ja tem conhecimento nessa stack.
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+No Back-End, foi adotado o NestJS, um framework robusto baseado em Node.js, que oferece uma estrutura modular e escalável para desenvolvimento de APIs REST. O banco de dados utilizado foi o PostgreSQL, e o acesso a ele foi gerenciado através do TypeORM, um ORM que facilita a manipulação de dados em bancos relacionais usando TypeScript.Também utilizamos o C# como um dos backends e para a API que fará a comunicação entre esses dois backends optamos pela Node.js,já que oferece um ambiente simples e prático para criação de API's
 
 ## Hospedagem
 
@@ -155,18 +155,3 @@ Explique como a hospedagem e o lançamento da plataforma foi feita.
 > - [Programação colaborativa com Repl.it](https://repl.it/)
 > - [Getting Started with Heroku](https://devcenter.heroku.com/start)
 > - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
-
-## Qualidade de Software
-
-Conceituar qualidade de fato é uma tarefa complexa, mas ela pode ser vista como um método gerencial que através de procedimentos disseminados por toda a organização, busca garantir um produto final que satisfaça às expectativas dos stakeholders.
-
-No contexto de desenvolvimento de software, qualidade pode ser entendida como um conjunto de características a serem satisfeitas, de modo que o produto de software atenda às necessidades de seus usuários. Entretanto, tal nível de satisfação nem sempre é alcançado de forma espontânea, devendo ser continuamente construído. Assim, a qualidade do produto depende fortemente do seu respectivo processo de desenvolvimento.
-
-A norma internacional ISO/IEC 25010, que é uma atualização da ISO/IEC 9126, define oito características e 30 subcaracterísticas de qualidade para produtos de software.
-Com base nessas características e nas respectivas sub-características, identifique as sub-características que sua equipe utilizará como base para nortear o desenvolvimento do projeto de software considerando-se alguns aspectos simples de qualidade. Justifique as subcaracterísticas escolhidas pelo time e elenque as métricas que permitirão a equipe avaliar os objetos de interesse.
-
-> **Links Úteis**:
->
-> - [ISO/IEC 25010:2011 - Systems and software engineering — Systems and software Quality Requirements and Evaluation (SQuaRE) — System and software quality models](https://www.iso.org/standard/35733.html/)
-> - [Análise sobre a ISO 9126 – NBR 13596](https://www.tiespecialistas.com.br/analise-sobre-iso-9126-nbr-13596/)
-> - [Qualidade de Software - Engenharia de Software 29](https://www.devmedia.com.br/qualidade-de-software-engenharia-de-software-29/18209/)

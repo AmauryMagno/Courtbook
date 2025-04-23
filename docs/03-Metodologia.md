@@ -57,6 +57,14 @@ Na primeira etapa do projeto, dividimos as funções solicitadas entre os integr
 - Gerenciamento de Tempo, Gerenciamento de Equipe e README de apresentação: Amaury Magno
 
 O projeto teve um início tardio devido a organização da equipe na turma correta, gerando algumas dificuldades durante o desenvolimento dos requisitos desta etapa. Diaante essas dificuldades o grupo fividiu rapidamente o que precisava ser finalizado dentro do prazo, entre os integrantes, de forma que cada um ficou responsável por uma parte crucial para conclusão da primeira etapa do projeto
+
+
+#### Etapa - 2
+Na segunda etapa do projeto, dividimos as funções solicitadas entre os integrantes porém tivemos alguns problemas em relação a entrega das tarefas,alguns integrantes tiveram problemas pessoais ou profissionais e acbaram não conseguindo entregar atividade no prazo,dessa forma tivemos que reajustar as atividades.Porém mesmo com esses problemas que surgiram no caminho conseguimos entregar o backend funcional e pronto para a integração com o web e mobile.
+
+Após uma reunião do grupo conversamos sobre os problemas que atrapalharam nosso desenvolvimento nessa etapa e alinhamos expectativas para não haver imprevistos nas próximas,abaixo segue uma imagem do quadro Kanban em um momento da etapa 2
+
+![Quadro Etapa 2](img/etapa2.png)
  
 
 ### Ferramentas

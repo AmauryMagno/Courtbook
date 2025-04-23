@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using WebApi_courtbook.Models;
 using WebApi_courtbook.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -16,7 +17,17 @@ namespace WebApi_courtbook
             // Add services to the container.
             builder.Services.Configure<CourtBookDataBaseSettings>(
                 builder.Configuration.GetSection("CourtBookDatabase"));
-            builder.Services.AddTransient(typeof(MongoService<>));
+            builder.Services.AddSingleton<IMongoService<Usuario>>(sp =>
+            {
+                var settings = sp.GetRequiredService<IOptions<CourtBookDataBaseSettings>>();
+                return new MongoService<Usuario>(settings, settings.Value.UsuarioCollectionName);
+            });
+
+            builder.Services.AddSingleton<IMongoService<Quadra>>(sp =>
+            {
+                var settings = sp.GetRequiredService<IOptions<CourtBookDataBaseSettings>>();
+                return new MongoService<Quadra>(settings, settings.Value.QuadraCollectionName);
+            });
 
             builder.Services.AddControllers();
 

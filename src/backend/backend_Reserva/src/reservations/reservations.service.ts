@@ -2,12 +2,13 @@ import {
   ConflictException,
   Injectable,
   NotFoundException,
+  UnprocessableEntityException,
 } from '@nestjs/common'
 import { CreateReservationDto } from './dto/create-reservation.dto'
 import { UpdateReservationDto } from './dto/update-reservation.dto'
 import { InjectModel } from '@nestjs/mongoose'
 import { Reservation, ReservationDocument } from './schemas/reservation.schema'
-import { Model } from 'mongoose'
+import mongoose, { Model } from 'mongoose'
 import { errorCodes } from '../utils/errorCodeNest'
 
 @Injectable()
@@ -44,6 +45,11 @@ export class ReservationsService {
   }
 
   async findOne(id: string): Promise<Reservation> {
+    
+    if (!mongoose.Types.ObjectId.isValid(id)) {
+      throw new UnprocessableEntityException({ message: 'Id inválido' })
+    }
+
     const reservation = await this.reservationModel.findById(id)
     if (!reservation) {
       throw new NotFoundException(`Reserva com ID ${id} não encontrada.`)
@@ -51,19 +57,26 @@ export class ReservationsService {
     return reservation
   }
 
-  async update(id: string, updateReservationDto: UpdateReservationDto): Promise<Reservation> {
-    const updatedReservation = await this.reservationModel
-    .findByIdAndUpdate(id, updateReservationDto, { new: true })
+  async update(
+    id: string,
+    updateReservationDto: UpdateReservationDto,
+  ): Promise<Reservation> {
+    const updatedReservation = await this.reservationModel.findByIdAndUpdate(
+      id,
+      updateReservationDto,
+      { new: true },
+    )
 
-    if (!updatedReservation) throw new NotFoundException(`Reserva com ID ${id} não encontrada.`);
+    if (!updatedReservation)
+      throw new NotFoundException(`Reserva com ID ${id} não encontrada.`)
 
-    return updatedReservation;
+    return updatedReservation
   }
 
-
   async remove(id: string): Promise<{ message: string }> {
-    const deleted = await this.reservationModel.findByIdAndDelete(id);
-    if (!deleted) throw new NotFoundException(`Reserva com ID ${id} não encontrada.`);
-    return { message: 'Reserva deletada com sucesso' };
+    const deleted = await this.reservationModel.findByIdAndDelete(id)
+    if (!deleted)
+      throw new NotFoundException(`Reserva com ID ${id} não encontrada.`)
+    return { message: 'Reserva deletada com sucesso' }
   }
 }
