@@ -11,7 +11,7 @@ using System.Text;
 
 namespace WebApi_courtbook.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrador")]
     [ApiController]
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
@@ -28,7 +28,7 @@ namespace WebApi_courtbook.Controllers
             await _mongoService.GetAsync();
 
         [HttpGet("{id:length(24)}")]
-        public async Task<ActionResult<Usuario>> Get(string id)
+        public async Task<ActionResult> Get(string id)
         {
             var usuario = await _mongoService.GetAsync(id);
             if(usuario == null) return NotFound();
@@ -37,19 +37,52 @@ namespace WebApi_courtbook.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Create(Usuario newUsuario)
+        public async Task<IActionResult> Create(UsuarioDto newUsuario)
         {
-            await _mongoService.CreateAsync(newUsuario);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            Usuario novo = new Usuario()
+            {
+                Id = newUsuario.Id,
+                NomeCompleto = newUsuario.NomeCompleto,
+                NomeUsuario = newUsuario.NomeUsuario,
+                Email = newUsuario.Email,
+                Senha = BCrypt.Net.BCrypt.HashPassword(newUsuario.Senha),
+                Perfil = newUsuario.Perfil
+            };
+
+            await _mongoService.CreateAsync(novo);
             return CreatedAtAction(nameof(Get), new {id = newUsuario.Id}, newUsuario);
         }
 
+        [Authorize(Roles = "Administrador, Locador, Locatario, LocadorLocatario")]
         [HttpPut("{id:length(24)}")]
-        public async Task<IActionResult> Update(string id, Usuario updateUsuario)
+        public async Task<IActionResult> Update(string id, UsuarioDto updateUsuario)
         {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            if (id != updateUsuario.Id)
+                return BadRequest();
+
             var usuario = await _mongoService.GetAsync(id);
-            if(usuario is null || updateUsuario.Id != usuario.Id) return NotFound();
+            if(usuario is null) return NotFound();
             
-            await _mongoService.UpdateAsync(id, updateUsuario);
+            usuario.NomeCompleto = updateUsuario?.NomeCompleto;
+            usuario.NomeUsuario = updateUsuario?.NomeUsuario;
+            usuario.Email = updateUsuario?.Email;
+            usuario.Senha = BCrypt.Net.BCrypt.HashPassword(updateUsuario.Senha);
+            usuario.Perfil = updateUsuario.Perfil;
+
+            try
+            {
+                await _mongoService.UpdateAsync(id, usuario);
+            }
+            catch
+            {
+                return NotFound();
+            }
+            
             return NoContent();
         }
 
@@ -61,38 +94,6 @@ namespace WebApi_courtbook.Controllers
 
             await _mongoService.RemoveAsync(id);
             return NoContent();
-        }
-
-        [AllowAnonymous]
-        [HttpPost("authenticate")]
-        public async Task<IActionResult> Authentication(AuthenticateDto model)
-        {
-            var usuarioDb = await _mongoService.GetAsync(model.Id);
-            if (usuarioDb is null || !string.Equals(model.Password, usuarioDb.Senha))
-                return Unauthorized();
-
-            var jwt = GenerateJwtToken(usuarioDb);
-            return Ok(new { jwtToken = jwt });
-        }
-        private string GenerateJwtToken(Usuario model)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("BjRxlIiDQHvTrRQM3Ke4CeS9uE3RZODH");
-            var claims = new ClaimsIdentity(new Claim[]
-            {
-             new Claim(ClaimTypes. NameIdentifier, model.Id.ToString()),
-             new Claim(ClaimTypes. Role, model.Perfil.ToString())
-            });
-
-            var tokenDescriptor = new SecurityTokenDescriptor
-            {
-                Subject = claims,
-                Expires = DateTime.UtcNow.AddHours(8),
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
-                SecurityAlgorithms.HmacSha256Signature)
-            };
-            var token = tokenHandler.CreateToken(tokenDescriptor);
-            return tokenHandler.WriteToken(token);
         }
 
     }

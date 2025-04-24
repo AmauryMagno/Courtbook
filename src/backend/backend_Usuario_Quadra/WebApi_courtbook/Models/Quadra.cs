@@ -8,6 +8,11 @@ namespace WebApi_courtbook.Models
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
+
+        [BsonIgnoreIfNull]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string UsuarioId { get; set; }
+
         [BsonRequired]
         public string Nome { get; set; }
         [BsonRequired]
