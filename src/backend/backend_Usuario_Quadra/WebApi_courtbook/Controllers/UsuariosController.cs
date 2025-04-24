@@ -35,6 +35,7 @@ namespace WebApi_courtbook.Controllers
             return Ok(usuario);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Create(Usuario newUsuario)
         {
@@ -67,9 +68,9 @@ namespace WebApi_courtbook.Controllers
         public async Task<IActionResult> Authentication(AuthenticateDto model)
         {
             var usuarioDb = await _mongoService.GetAsync(model.Id);
-            if (usuarioDb is null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Senha))
-            
-            return Unauthorized();
+            if (usuarioDb is null || !string.Equals(model.Password, usuarioDb.Senha))
+                return Unauthorized();
+
             var jwt = GenerateJwtToken(usuarioDb);
             return Ok(new { jwtToken = jwt });
         }
