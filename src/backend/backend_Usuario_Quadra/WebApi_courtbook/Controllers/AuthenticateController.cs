@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
+using System.Diagnostics.Eventing.Reader;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
@@ -24,9 +25,24 @@ namespace WebApi_courtbook.Controllers
         [HttpPost]
         public async Task<IActionResult> Authentication(AuthenticateDto model)
         {
-            Console.WriteLine(model);
-            var usuarioDb = await _mongoService.GetAsync(model.Id);
-            if (usuarioDb is null || !BCrypt.Net.BCrypt.Verify(model.Password, usuarioDb.Senha))
+            if (model is null || (string.IsNullOrWhiteSpace(model.Id) && string.IsNullOrWhiteSpace(model.NomeUsuario)))
+                return Unauthorized();
+
+            Usuario usuarioDb = null;
+
+            string Id = model?.Id;
+            string NomeUsuario = model.NomeUsuario;
+
+            if (!string.IsNullOrWhiteSpace(model.Id))
+            {
+                usuarioDb = await _mongoService.GetAsync(model.Id);
+            }
+            else if (!string.IsNullOrWhiteSpace(model.NomeUsuario))
+            {
+                usuarioDb = await _mongoService.GetAsyncIdByCampo(NomeUsuario, nameof(Usuario.NomeUsuario));
+            }
+
+            if (usuarioDb is null || !BCrypt.Net.BCrypt.Verify(model.Senha, usuarioDb.Senha))
                 return Unauthorized();
 
             var jwt = GenerateJwtToken(usuarioDb);

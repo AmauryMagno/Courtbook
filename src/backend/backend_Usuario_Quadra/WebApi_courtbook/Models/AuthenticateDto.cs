@@ -4,9 +4,11 @@ namespace WebApi_courtbook.Models
 {
     public class AuthenticateDto : IEntity
     {
-        [Required]
         public string Id { get; set; }
+        
+        public string NomeUsuario { get; set; }
+
         [Required]
-        public string Password { get; set; }
+        public string Senha { get; set; }
     }
 }

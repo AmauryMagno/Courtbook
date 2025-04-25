@@ -42,6 +42,9 @@ namespace WebApi_courtbook.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
+            if(VerificarExistenciaNomeUsuario(newUsuario.NomeUsuario))
+                return BadRequest(new {erro = "Nome de Usuário já existe"});
+
             Usuario novo = new Usuario()
             {
                 Id = newUsuario.Id,
@@ -94,6 +97,14 @@ namespace WebApi_courtbook.Controllers
 
             await _mongoService.RemoveAsync(id);
             return NoContent();
+        }
+
+        private bool VerificarExistenciaNomeUsuario(string nomeUsuario)
+        {
+            var usuarioDb = _mongoService.GetAsyncIdByCampo(nomeUsuario, nameof(Usuario.NomeUsuario));
+
+            if (usuarioDb.Result is null) return false;
+            return true;
         }
 
     }
