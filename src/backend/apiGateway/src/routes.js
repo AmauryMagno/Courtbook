@@ -3,6 +3,7 @@ import ReservationsController from "./controllers/ReservationsController.js";
 import { verificarToken } from "./middlewares/authorization.js";
 import UsersController from "./controllers/UsersController.js";
 import QuadrasController from "./controllers/QuadrasController.js";
+import AuthenticateController from "./controllers/AuthenticateController.js";
 
 const routes = new Router();
 
@@ -27,10 +28,9 @@ routes.delete(
   ReservationsController.delete
 );
 
+routes.post("/authenticate", AuthenticateController.Authenticate);
 
 routes.post("/users", UsersController.createUsers);
-
-
-routes.post("/courts", QuadrasController.createQuadras);
+routes.post("/courts", verificarToken, QuadrasController.createQuadras);
 
 export default routes;

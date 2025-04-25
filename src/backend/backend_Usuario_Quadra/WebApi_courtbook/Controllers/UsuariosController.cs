@@ -37,7 +37,7 @@ namespace WebApi_courtbook.Controllers
 
         [AllowAnonymous]
         [HttpPost]
-        public async Task<IActionResult> Create(UsuarioDto newUsuario)
+        public async Task<ActionResult<UsuarioDto>> Create(UsuarioDto newUsuario)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -56,13 +56,14 @@ namespace WebApi_courtbook.Controllers
             };
 
             await _mongoService.CreateAsync(novo);
-            return CreatedAtAction(nameof(Get), new {id = newUsuario.Id}, newUsuario);
+            return CreatedAtAction(nameof(Get), new {id = novo.Id}, novo);
         }
 
         [Authorize(Roles = "Administrador, Locador, Locatario, LocadorLocatario")]
         [HttpPut("{id:length(24)}")]
         public async Task<IActionResult> Update(string id, UsuarioDto updateUsuario)
         {
+            
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
             if (id != updateUsuario.Id)
@@ -80,13 +81,12 @@ namespace WebApi_courtbook.Controllers
             try
             {
                 await _mongoService.UpdateAsync(id, usuario);
+                return CreatedAtAction(nameof(Get), new {id = usuario.Id}, usuario);
             }
             catch
             {
                 return NotFound();
             }
-            
-            return NoContent();
         }
 
         [HttpDelete("{id:length(24)}")]

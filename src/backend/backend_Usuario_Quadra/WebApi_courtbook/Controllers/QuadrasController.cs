@@ -7,8 +7,6 @@ using WebApi_courtbook.Services;
 
 namespace WebApi_courtbook.Controllers
 {
-    [Authorize(Roles = "Administrador, LocadorLocatario, Locador")]
-    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class QuadrasController : ControllerBase
@@ -16,11 +14,12 @@ namespace WebApi_courtbook.Controllers
         private readonly IMongoService<Quadra> _mongoService;
         private readonly IMongoService<Usuario> _mongoUsarioService;
 
-        public QuadrasController(IMongoService<Quadra> mongoService)
+        public QuadrasController(IMongoService<Quadra> mongoService, IMongoService<Usuario> mongoUsarioService)
         {
             _mongoService = mongoService;
+            _mongoUsarioService = mongoUsarioService;
         }
-        [Authorize(Roles = "Locatario")]
+        [Authorize(Roles = "Administrador, LocadorLocatario, Locador, Locatario")]
         [HttpGet]
         public async Task<List<Quadra>> Get() =>
             await _mongoService.GetAsync();
@@ -34,17 +33,24 @@ namespace WebApi_courtbook.Controllers
             return Ok(quadra);
         }
 
+        [Authorize(Roles = "Administrador, LocadorLocatario, Locador")]
         [HttpPost]
         public async Task<IActionResult> Create(Quadra newQuadra)
         {
             if (newQuadra == null)
                 return BadRequest();
 
-            var userId = await _mongoUsarioService.GetAsync(ClaimTypes.NameIdentifier);
+            var NameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (newQuadra.UsuarioId != NameIdentifier)
+            {
+                return BadRequest();
+            }
+
+            //Verifica se o Usuario.Id da rota existe no banco 
+            Usuario userId = await _mongoUsarioService.GetAsync(newQuadra.UsuarioId);
             if (string.IsNullOrEmpty(userId.ToString()))
                 return Unauthorized();
-
-            newQuadra.UsuarioId = userId.ToString();
+            newQuadra.UsuarioId = userId.Id;
 
             await _mongoService.CreateAsync(newQuadra);
             return CreatedAtAction(nameof(Get), new { id = newQuadra.Id }, newQuadra);

@@ -54,8 +54,8 @@ namespace WebApi_courtbook.Controllers
             var key = Encoding.ASCII.GetBytes("BjRxlIiDQHvTrRQM3Ke4CeS9uE3RZODH");
             var claims = new ClaimsIdentity(new Claim[]
             {
-             new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
-             new Claim(ClaimTypes.Role, model.Perfil.ToString())
+                new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
+                new Claim(ClaimTypes.Role, model.Perfil.ToString())
             });
 
             var tokenDescriptor = new SecurityTokenDescriptor
