@@ -1,6 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 using MongoDB.Bson;
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace WebApi_courtbook.Models
 {
@@ -13,7 +14,9 @@ namespace WebApi_courtbook.Models
         [BsonRequired]
         public string NomeUsuario { get; set; }
         public string Email { get; set; }
-        [BsonRequired]
+
+        [BsonIgnoreIfNull]
+        [JsonIgnore]
         public string Senha { get; set; }
         [BsonRequired]
         public Perfil Perfil { get; set; }

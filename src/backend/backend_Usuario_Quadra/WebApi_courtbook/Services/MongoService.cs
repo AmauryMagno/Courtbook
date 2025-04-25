@@ -8,6 +8,7 @@ namespace WebApi_courtbook.Services
     {
         Task<List<T>> GetAsync();
         Task<T> GetAsync(string id);
+        Task<T> GetAsyncIdByCampo(string item, string campo);
         Task CreateAsync(T newItem);
         Task UpdateAsync(string id, T newItem);
         Task RemoveAsync(string id);
@@ -32,6 +33,12 @@ namespace WebApi_courtbook.Services
         public async Task<T> GetAsync(string id)
         {
             return await _collection.Find(item => item.Id == id).FirstOrDefaultAsync();
+        }
+
+        public async Task<T> GetAsyncIdByCampo(string item, string campo)
+        {
+            var filter = Builders<T>.Filter.Eq(campo, item);
+            return await _collection.Find(filter).FirstOrDefaultAsync();
         }
 
         public async Task CreateAsync(T newItem) =>
