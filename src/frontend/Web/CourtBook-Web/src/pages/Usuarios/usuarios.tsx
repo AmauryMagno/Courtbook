@@ -1,10 +1,10 @@
 import {JSX} from "react"
 import { Titulo } from "../Login-Cadastro/Login/loginCss"
 
-export const Home = (): JSX.Element => {
+export const Usuarios = (): JSX.Element => {
     return(
         <Titulo>
-          Pagina Home
+          Pagina Usuarios
         </Titulo>
     )
 }
