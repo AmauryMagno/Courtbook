@@ -63,15 +63,21 @@ class ReservationsController {
 
         const user = await responseUser.data;
 
-        // const responseCourt = await axios.get(`https://localhost:7071/api/Quadras/${reservation.courtId}`, {
-        //   httpsAgent: agent,
-        // });
+        const responseCourt = await axios.get(
+          `https://localhost:7071/api/Quadras/${reservation.courtId}`,
+          {
+            httpsAgent: agent,
+            headers: {
+              Authorization: token,
+            },
+          }
+        );
 
-        // const court = await responseCourt.json();
+        const court = await responseCourt.data;
 
         data[index] = {
           ...reservation,
-          // court,
+          court,
           user,
         };
       })

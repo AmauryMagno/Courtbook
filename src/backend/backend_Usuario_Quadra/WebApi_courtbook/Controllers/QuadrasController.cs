@@ -24,7 +24,7 @@ namespace WebApi_courtbook.Controllers
         public async Task<List<Quadra>> Get() =>
             await _mongoService.GetAsync();
 
-        [Authorize(Roles = "Locatario")]
+        [Authorize(Roles = "Locatario, Administrador")]
         [HttpGet("{id:length(24)}")]
         public async Task<ActionResult<Quadra>> Get(string id)
         {
