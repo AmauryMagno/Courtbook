@@ -9,7 +9,7 @@ class QuadrasController {
 
         const token = req.headers.authorization;
         try{
-            const response = await fetch("https://localhost:7071/api/Quadras/", {
+            const response = await fetch("https://localhost:7071/api/Quadras", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

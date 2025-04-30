@@ -31,6 +31,7 @@ routes.delete(
 routes.post("/authenticate", AuthenticateController.authenticate);
 
 routes.post("/users", UsersController.createUsers);
+routes.post("/users:id", verificarToken, UsersController.getUserById);
 routes.post("/courts", verificarToken, QuadrasController.createQuadras);
 
 export default routes;
