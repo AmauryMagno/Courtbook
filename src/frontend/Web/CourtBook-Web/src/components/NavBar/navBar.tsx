@@ -19,7 +19,7 @@ export const NavBar = (): JSX.Element => {
         }}
       >
         {/* Navegação */}
-        <nav style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
+        <nav style={{ display: "flex", flexDirection: "column", gap: "40px" }}>
           <Link to="/quadras" style={linkStyle}>Quadras</Link>
           <Link to="/reservas" style={linkStyle}>Reservas</Link>
           <Link to="/usuarios" style={linkStyle}>Usuários</Link>
