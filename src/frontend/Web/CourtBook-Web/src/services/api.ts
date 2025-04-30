@@ -5,7 +5,7 @@ import LocalForage from "localforage"
 const onJwt = async (config: InternalAxiosRequestConfig) => {
     const token = await LocalForage.getItem('@TOKEN_KEY');
     if (token && config.headers){
-        config.headers.set('Authorization', `Barer ${token}`);
+        config.headers.set('Authorization', `Bearer ${token}`);
     }
     return config;
 }

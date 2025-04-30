@@ -19,11 +19,6 @@ class QuadrasController {
                 agent,
             });
             
-            if(!response){
-                const errorText = await response.text();
-                console.error('Erro na API externa:', response.status, errorText);
-                return res.status(response.status).send(errorText);
-            }
             if (!response.ok) {
                 const errorText = await response.text();
                 console.error('Erro na API externa:', response.status, errorText);
@@ -34,7 +29,7 @@ class QuadrasController {
             return res.status(response.status).json(data);
 
         } catch (error){
-            console.error('Erro ao coenctar com a API .NET:', error.message);
+            console.error('Erro ao conectar com a API .NET:', error.message);
             return res.status(500).json({message: "Erro na conexão com a API externa .NET", detalhes: error.message})
         }
     }

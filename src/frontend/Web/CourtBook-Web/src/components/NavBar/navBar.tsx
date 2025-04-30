@@ -46,11 +46,6 @@ export const NavBar = (): JSX.Element => {
           </div>
         </div>
       </aside>
-
-      {/* Conteúdo principal */}
-      <main style={{ flex: 1, padding: "40px" }}>
-        <h1>Bem-vindo à Home</h1>
-      </main>
     </div>
   );
 };

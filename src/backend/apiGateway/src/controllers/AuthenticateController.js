@@ -2,7 +2,7 @@ import https from 'https';
 import fetch from 'node-fetch';
 
 class AuthenticateController {
-    async Authenticate(req, res) {
+    async authenticate(req, res) {
         const agent = new https.Agent({
             rejectUnauthorized: false,
         });

@@ -28,7 +28,7 @@ routes.delete(
   ReservationsController.delete
 );
 
-routes.post("/authenticate", AuthenticateController.Authenticate);
+routes.post("/authenticate", AuthenticateController.authenticate);
 
 routes.post("/users", UsersController.createUsers);
 routes.post("/courts", verificarToken, QuadrasController.createQuadras);
